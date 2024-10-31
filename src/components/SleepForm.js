@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './css/SleepForm.css';
 
 const SleepForm = () => {
   const [date, setDate] = useState("");
@@ -30,19 +31,21 @@ const SleepForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>睡眠データを入力</h2>
-      <label>日付:
-        <input type="date" value={date} onChange={(e) => setDate(e.target.value)} required />
-      </label>
-      <label>睡眠時間 (時間):
-        <input type="number" value={sleepDuration} onChange={(e) => setSleepDuration(e.target.value)} required />
-      </label>
-      <label>睡眠の質:
-        <input type="text" value={sleepQuality} onChange={(e) => setSleepQuality(e.target.value)} required />
-      </label>
-      <button type="submit">登録</button>
-    </form>
+    <div className="form-container">
+      <h2 className="form-title">睡眠データを入力</h2>
+      <form onSubmit={handleSubmit} className="sleep-form">
+        <label className="form-label">日付:
+          <input type="date" value={date} onChange={(e) => setDate(e.target.value)} required className="form-input" />
+        </label>
+        <label className="form-label">睡眠時間 (時間):
+          <input type="number" value={sleepDuration} onChange={(e) => setSleepDuration(e.target.value)} required className="form-input" />
+        </label>
+        <label className="form-label">睡眠の質:
+          <input type="text" value={sleepQuality} onChange={(e) => setSleepQuality(e.target.value)} required className="form-input" />
+        </label>
+        <button type="submit" className="submit-button">登録</button>
+      </form>
+    </div>
   );
 };
 

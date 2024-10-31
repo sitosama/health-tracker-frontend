@@ -1,0 +1,18 @@
+/* Analysis.css */
+.analysis-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.analysis-title {
+  text-align: center;
+  color: #4a90e2;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}

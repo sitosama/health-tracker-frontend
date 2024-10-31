@@ -1,0 +1,66 @@
+/* Home.css */
+.home-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.home-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4a90e2;
+}
+
+.summary-section, .trend-section, .advice-section {
+  margin-bottom: 30px;
+}
+
+.data-summary {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.summary-card {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.summary-card:hover {
+  transform: translateY(-5px);
+}
+
+.summary-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.summary-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.trend-section h2, .advice-section h2 {
+  font-size: 1.5rem;
+  color: #4a90e2;
+  margin-bottom: 10px;
+}
+
+.advice-section p {
+  font-size: 1.1rem;
+  background-color: #e7f3ff;
+  padding: 15px;
+  border-radius: 8px;
+  color: #3178c6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
