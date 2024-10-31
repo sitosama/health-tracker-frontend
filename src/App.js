@@ -1,9 +1,12 @@
-import logo from './logo.svg';
+//App.jsにルーティングを追加して画面遷移をする
+// import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Home from './components/Home';
 import SleepForm from './components/SleepForm';
+import Analysis from './components/Analysis';
 
 
 
@@ -27,28 +30,29 @@ function App() {
   }, []);
 
   return (
+    <Router>
     <div className="App">
-      
-      <h1>健康トラッカー</h1>
-      <SleepForm/>
-      {/* <Home /> */}
-  
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <h1>Health Tracker</h1>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> 
+        <h1>健康トラッカー</h1>
+        {/* ナビゲーションリンクを追加 */}
+        <nav>
+          <Link to="/">ホーム</Link> | 
+          <Link to="/sleep">睡眠データの登録</Link>
+          <Link to="/analysis">データ分析</Link>
+        </nav>
+      </header>
+
+      {/* ルーティング設定 */}
+      <Routes>
+        {/* ホーム画面 */}
+        <Route path="/" element={<Home />} />
+        {/* SleepForm画面 */}
+        <Route path="/sleep" element={<SleepForm />} />
+        <Route path="/analysis" element={<Analysis />} />
+      </Routes>
     </div>
+  </Router>
+  
   );
 }
 
